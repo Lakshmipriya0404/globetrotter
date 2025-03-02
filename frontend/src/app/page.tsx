@@ -32,7 +32,9 @@ export default function HomePage() {
     setSelectedAnswer(null);
     setClueIndex(0);
     try {
-      const response = await fetch("http://localhost:5000/api/get-destination");
+      const response = await fetch(
+        "https://globetrotter-hr3l.onrender.com/api/get-destination"
+      );
       const data = await response.json();
       setDestination(data.destination);
       setOptions(data.options);
